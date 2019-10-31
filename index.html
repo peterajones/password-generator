@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Random<br />Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+      </div>
+      <div id="msg"></div>
+      <div class="settings">
+        <div class="setting">
+          <label>Password length</label>
+          <input type="range" min="1" max="20" value="20" id="length" /><span id="length_disp"></span>
+        </div>
+        <div class="setting">
+          <label
+            >Include uppercase letters
+            <input type="checkbox" id="uppercase" checked onchange="handleUpperChange()" />
+          </label>
+        </div>
+        <div class="setting">
+          <label
+            >Include lowercase letters
+            <input type="checkbox" id="lowercase" checked onchange="handleLowerChange()" />
+          </label>
+        </div>
+        <div class="setting">
+          <label
+            >Include numbers
+            <input type="checkbox" id="numbers" checked onchange="handleNumbersChange()" />
+          </label>
+        </div>
+        <div class="setting">
+          <label
+            >Include symbols
+            <input type="checkbox" id="symbols" checked onchange="handleSymbolsChange()" />
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-large" id="generate">
+        Generate password
+      </button>
+      <button class="btn" id="clipboard" title="Copy to clipboard...">
+        <i class="far fa-clipboard"></i>
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
